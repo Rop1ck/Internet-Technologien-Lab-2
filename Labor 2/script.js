@@ -610,7 +610,7 @@ const Sinkship = {
         }
     },
     fetchAndDecode(query, stid) {
-        fetch(serverURL, `{query}?`)
+        fetch(serverURL, query)
         .then(response => response.json());
     },
     async sendStart() {

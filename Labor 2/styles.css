@@ -1,0 +1,205 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #373B44, #4286f4);
+}
+
+main {
+    flex-grow: 1;
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+header {
+    height: 10vh;
+    color: white;
+}
+
+footer {
+    height: 5vh;
+    padding-top: 2vh;
+    color: white;
+}
+
+.limiter {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.controls {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em auto 1em auto;
+}
+
+button {
+    margin: 1em auto;
+    width: 20%;
+    padding: 0.7em;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.fields {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.field {
+    background-color: white;
+    /*width: max(35vh, 400px);
+    height: max(35vh, 400px);*/
+    min-width: 300px; /* Ändenr und nach andere Lösung gucken*/
+    max-width: 30%;
+    min-height: 300px;
+    max-height: 30%;
+    border: 1px solid black;
+    margin: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.cell {
+    border: 1px solid black;
+    width: calc(10% - 2px);
+    height: calc(10% - 2px);
+    float: left;
+    background-image: url('images/backgrounds.svg');
+    background-size: 500% 400%;
+}
+
+.water {
+    background-color: lightblue;
+    background-position: -100% 0;
+}
+
+.left {
+    background-color: lightblue;
+    background-position: 0 -100%;
+}
+
+.horizontal {
+    background-color: lightblue;
+    background-position: -100% -100%;
+}
+
+.right {
+    background-color: lightblue;
+    background-position: -200% -100%;
+}
+.top {
+    background-color: lightblue;
+    background-position: -400% 0;
+}
+
+.vertical {
+    background-color: lightblue;
+    background-position: -400% -100%;
+}
+
+.bottom {
+    background-color: lightblue;
+    background-position: -400% -200%;
+}
+
+table {
+text-align: left;
+margin: 1.5em auto;
+border-spacing: 0;
+}
+
+.battleshipV, .battleshipH, .cruiserV, .cruiserH, .destroyerV, .destroyerH,
+.submarineV, .submarineH {
+    width: 32px;
+    height: 32px;
+    background-image: url('images/backgrounds.svg');
+    background-size: 500% 400%;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+td, th {
+    
+    padding: 0.3em; /*Löschen vielleicht?*/
+}
+
+table .battleshipH {
+    background-position: 0 -200%;
+}
+
+table .battleshipV {
+    background-position: 0 -300%;
+}
+
+table .cruiserH {
+    background-position: -100% -200%;
+}
+
+table .cruiserV {
+    background-position: -100% -300%;
+}
+
+table .destroyerH {
+    background-position: -200% -200%;
+}
+
+table .destroyerV {
+    background-position: -200% -300%;
+}
+
+table .submarineH {
+    background-position: -300% -200%;
+}
+
+table .submarineV {
+    background-position: -300% -300%;
+}
+
+table .selectable:hover {
+background-color: orange;
+}
+
+.cell.usable {
+    background-color: lightgreen;
+}
+
+#computerfield .disabled {
+    background-color: lightgrey;
+}
+
+.cell.disabled {
+    background-color: lightgray;
+}
+
+.debugInfo {
+    width: 70%;
+    padding: 0.9em;
+    margin: 1em auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
